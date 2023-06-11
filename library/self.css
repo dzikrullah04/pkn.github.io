@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap');
+
+p {
+    text-align: justify;
+    
+}
+.coy {
+    text-indent: 40px;
+  }
+  .pustaka {
+  text-indent: 35px;
+
+}
+.sumber {
+  text-align: end;
+  font-family: 'Open Sans', sans-serif;
+}
+.tengah {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.poster {
+  width: 200px;
+  margin-top: 50px;
+  position: absolute; 
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 200px; /* Need a specific value to work */
+}
