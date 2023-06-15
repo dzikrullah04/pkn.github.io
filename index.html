@@ -61,23 +61,10 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/">Home</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="true">
-              BAGIAN
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#I">I. TUJUAN</a></li>
-              <li><a class="dropdown-item" href="#II">II. LANDASAN TEORI</a></li>
-              <li><a class="dropdown-item" href="#III">III. ALAT & BAHAN</a></li>
-              <li><a class="dropdown-item" href="#IV">IV. PROSEDUR KERJA</a></li>
-              <li><a class="dropdown-item" href="#V">V. DATA PENGAMATAN</a></li>
-              <li><a class="dropdown-item" href="#VI">VI. HASIL PEMBAHASAN</a></li>
-              <li><a class="dropdown-item" href="#VII">VII. KESIMPULAN</a></li>
-              <li><a class="dropdown-item" href="#VIII">VIII. LAMPIRAN</a></li>
-              <li><a class="dropdown-item" href="#IX">IX. DAFTAR PUSTAKA</a></li>
-            </ul>
+          <li class="nav-item">
+            <a class="nav-link" onclick="openPopup()" aria-current="page">Quiz</a>
           </li>
+          
 
         </ul>
       </div>
@@ -197,6 +184,22 @@ Masuknya LGBT ke Indonesia merupakan fenomena yang terjadi secara bertahap seiri
       </p>
     </div>
     
+
+
+    <div id="popup" class="overlay">
+      <div class="popup">
+        <h2>Masukan Jawaban</h2>
+        <a class="close" href="#" onclick="closePopup()">&times;</a>
+        <div class="content">
+          <form>
+            <label for="name">Jawaban:</label>
+            <input type="text" id="name" name="name">
+  
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+      </div>
+    </div>
   <!-- end content -->
   <script src="/library/bootstrap.bundle.min.js"></script>
   <script type="text/javascript">
@@ -209,6 +212,37 @@ Masuknya LGBT ke Indonesia merupakan fenomena yang terjadi secara bertahap seiri
         nav.classList.remove('bg-dark', 'shadow');
       }
     });
+  </script>
+
+  <script type="text/javascript">
+    function openPopup() {
+  document.getElementById("popup").style.display = "flex";
+}
+
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}
+
+function submitForm() {
+  var nameInput = document.getElementById("name").value;
+  if (nameInput.toLowerCase() === "hiv" || nameInput.toLowerCase() === "aids" || nameInput.toLowerCase() === "hiv/aids"  ) {
+    window.location.href = "https://families.google.com/jp/6CsKizFSB1oXKPdd3VzvXbHaTr2uXA";
+  }else if (nameInput.toLowerCase() === "pasal 414" || nameInput.toLowerCase() === "414") {
+    window.location.href = "https://families.google.com/jp/-ZygfPAMPSXPHFKUL-U7PfXICvt3bw";
+
+  } 
+  else {
+    alert("Jawaban Salah.");
+  }
+}
+
+var form = document.querySelector("form");
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+  submitForm();
+});
+
+
   </script>
 </body>
 
